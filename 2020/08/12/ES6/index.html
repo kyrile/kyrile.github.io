@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>ES6 | 刻意练习，行者由心</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. let含义:局部变量 对比（var）: 变量提升VS暂时性死区  特点：不允许重复声名 重要技能   （1）块级作用域  ​                 （2）函数声明 2.const含义：只读的常量 对比（let）: 变量不提升（暂时性死区），不允许重复声明，块级作用域 本质 ：变量指向的那个内存地址所保存的数据不得改动 ​          简单类型的数据（数值、字符串、布尔值）&#x3D;&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6">
+<meta property="og:url" content="http://yoursite.com/2020/08/12/ES6/index.html">
+<meta property="og:site_name" content="刻意练习，行者由心">
+<meta property="og:description" content="1. let含义:局部变量 对比（var）: 变量提升VS暂时性死区  特点：不允许重复声名 重要技能   （1）块级作用域  ​                 （2）函数声明 2.const含义：只读的常量 对比（let）: 变量不提升（暂时性死区），不允许重复声明，块级作用域 本质 ：变量指向的那个内存地址所保存的数据不得改动 ​          简单类型的数据（数值、字符串、布尔值）&#x3D;&amp;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-08-12T13:38:22.000Z">
+<meta property="article:modified_time" content="2020-08-17T15:14:20.692Z">
+<meta property="article:author" content="陈晓忠">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="刻意练习，行者由心" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">刻意练习，行者由心</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ES6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/12/ES6/" class="article-date">
+  <time datetime="2020-08-12T13:38:22.000Z" itemprop="datePublished">2020-08-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ES6
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-let"><a href="#1-let" class="headerlink" title="1. let"></a>1. let</h2><p>含义:局部变量</p>
+<p>对比（var）: 变量提升VS暂时性死区 </p>
+<p>特点：不允许重复声名</p>
+<p>重要技能   （1）块级作用域 </p>
+<p>​                 （2）函数声明</p>
+<h2 id="2-const"><a href="#2-const" class="headerlink" title="2.const"></a>2.const</h2><p>含义：只读的常量</p>
+<p>对比（let）: 变量不提升（暂时性死区），不允许重复声明，块级作用域</p>
+<p>本质 ：<strong>变量指向的那个内存地址所保存的数据不得改动</strong></p>
+<p>​          简单类型的数据（数值、字符串、布尔值）=&gt; 等同于常量</p>
+<p>​          复合类型的数据（主要是对象和数组）=&gt; 变量指向的内存地址，保存的只是一个指向实际数据的指针</p>
+<p>​                                                                       =&gt; <code>const</code>只能保证总是指向另一个固定的地址</p>
+<p>​                                                                       =&gt; 它指向的数据结构是不是可变的，就完全不能控制了</p>
+<h2 id="3-Set和Map数据结构"><a href="#3-Set和Map数据结构" class="headerlink" title="3.Set和Map数据结构"></a>3.Set和Map数据结构</h2><p>Set: </p>
+<p>   本质：构造函数</p>
+<p>​    对比（WeakSet）：成员不只能是对象 VS 成员只能是对象</p>
+<p>​                                    成员的值都是唯一的 VS 成员的值都是唯一的</p>
+<p>​    方法：</p>
+<p>​    应用: 去除数组重复成员</p>
+<p>WeakSet: </p>
+<p>Map:</p>
+<h2 id="4-变量的解构赋值"><a href="#4-变量的解构赋值" class="headerlink" title="4.变量的解构赋值"></a>4.变量的解构赋值</h2><p>数组：</p>
+<p>对象：</p>
+<p>字符串：</p>
+<p>数值和布尔值：</p>
+<p>函数参数：</p>
+<p>圆括号：</p>
+<p>使用场景：</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/12/ES6/" data-id="ckdzldmfm0000o8vb108uauv2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/08/17/React-%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          React+Antd4-后台管理
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/29/%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%982/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">爬虫实战2</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E7%88%AC%E8%99%AB/">web爬虫</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/18/React-%E7%9F%A5%E8%AF%86%E7%82%B9/">React-知识点</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/17/React-%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86/">React+Antd4-后台管理</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/12/ES6/">ES6</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/29/%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%982/">爬虫实战2</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/25/Python%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%E5%90%8E%E5%8F%B0%E6%9C%8D%E5%8A%A11/">Python搭建网站后台服务1</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 陈晓忠<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
