@@ -95,7 +95,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/10/15/es5/" data-id="ckhnj16k3000kusvbedue3sa3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/10/15/es5/" data-id="ckiyjgd28000n8gvb9ynyfurx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -204,7 +204,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git branch &#x2F;&#x2F;显示分支列表</span><br><span class="line">git branch 分支名 &#x2F;&#x2F;创建分支</span><br><span class="line">git checkout 分支名 &#x2F;&#x2F;切换分支</span><br><span class="line">git checkout -b 分支名 &#x2F;&#x2F;创建分支并切换分支</span><br><span class="line">git branch -D 分支名 &#x2F;&#x2F;强制删除分支</span><br><span class="line">git log --oneline --decorate --graph --all  &#x2F;&#x2F;查看完整的分支图（没删除前）</span><br><span class="line">git config --global alias.lol &quot;log --oneline --decorate --graph --all&quot; &#x2F;&#x2F;配别名</span><br><span class="line">git branch -v  &#x2F;&#x2F;查看分支的最后一个提交</span><br><span class="line">git branch -vv  &#x2F;&#x2F;</span><br></pre></td></tr></table></figure>
 </li>
 <li><input checked="" disabled="" type="checkbox"> <p>Git团队协作</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">git config --list</span><br><span class="line">成员：</span><br><span class="line">    git clone url</span><br><span class="line">    git checkout -b devForDzq </span><br><span class="line">    (在自己的分支上创建功能分支：</span><br><span class="line">     创建：git checkout 分支名</span><br><span class="line">     	  git branch 分支名 &#x2F;&#x2F;创建分支</span><br><span class="line">     	  git branch -b 分支名</span><br><span class="line">     查看: git branch</span><br><span class="line">     合并分支: git merge 分支名</span><br><span class="line">     删除分支: git branch -d 分支名)</span><br><span class="line">    </span><br><span class="line">    git push origin devForDzq</span><br><span class="line">    ( git checkout -u orgin&#x2F;devForDzq(远程跟踪分支名)</span><br><span class="line">      git push</span><br><span class="line">    )</span><br><span class="line">项目负责人:</span><br><span class="line">	git fetch dzq-819</span><br><span class="line">    </span><br><span class="line">	git checkout -b devForDzq</span><br><span class="line">	git merge dzq-819&#x2F;devForDzq</span><br><span class="line">	(git branch -u dzq-819&#x2F;devForDzq</span><br><span class="line">	 git pull &#x2F;&#x2F;更新当前分支的数据</span><br><span class="line">	 git branch -u dzq-819&#x2F;master</span><br><span class="line">	 git pull &#x2F;&#x2F;更新当前分支的数据</span><br><span class="line">	 )</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">git config --list</span><br><span class="line">成员：</span><br><span class="line">    git clone url</span><br><span class="line">    git checkout -b devForDzq </span><br><span class="line">    (在自己的分支上创建功能分支：</span><br><span class="line">     创建：git branch 分支名 &#x2F;&#x2F;创建分支</span><br><span class="line">     	  git checkout 分支名</span><br><span class="line">     	  git branch -b 分支名</span><br><span class="line">     查看: git branch</span><br><span class="line">     合并分支: git merge 分支名</span><br><span class="line">     删除分支: git branch -d 分支名)</span><br><span class="line">    </span><br><span class="line">    git push origin devForDzq</span><br><span class="line">    ( git checkout -u orgin&#x2F;devForDzq(远程跟踪分支名)</span><br><span class="line">      git push</span><br><span class="line">    )</span><br><span class="line">项目负责人:</span><br><span class="line">git remote add origin url </span><br><span class="line">git remote rm origin &#x2F;&#x2F; 移除本地关联</span><br><span class="line">git push origin master(第一次)</span><br><span class="line">git branch -u dzq-819&#x2F;devForDzq</span><br><span class="line"></span><br><span class="line">git fetch dzq-819</span><br><span class="line"></span><br><span class="line">git checkout -b devForDzq</span><br><span class="line">git merge dzq-819&#x2F;devForDzq</span><br><span class="line">(git branch -u dzq-819&#x2F;devForDzq</span><br><span class="line">git pull &#x2F;&#x2F;更新当前分支的数据</span><br><span class="line">git branch -u dzq-819&#x2F;master</span><br><span class="line">git pull &#x2F;&#x2F;更新当前分支的数据</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 
 
@@ -216,7 +216,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/10/14/git%E6%8C%87%E5%8D%97/" data-id="ckhnj16kb000uusvb6z000c30" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/10/14/git%E6%8C%87%E5%8D%97/" data-id="ckiyjgd2b000r8gvb11k90wbz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -387,7 +387,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/10/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" data-id="ckhnj16k7000qusvb8wy92m74" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/10/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" data-id="ckiyjgd29000p8gvb2dgaa1p1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -419,39 +419,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li><p>电脑硬件</p>
+        <p>编程的本质是什么？编程的本质其实就是跟计算机沟通的过程，让计算机帮我们干活，所以要了解编程的本质就要去了解计算机</p>
+<ol>
+<li><p>计算机主要元器件</p>
 <p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/1.%E7%94%B5%E8%84%91%E7%A1%AC%E4%BB%B6.png" alt=""></p>
-<ul>
-<li>内存：读写速度快</li>
-<li>硬盘：读写速度慢</li>
-</ul>
+<p>显示器，鼠标/键盘这些我们天天接触，很好理解。硬盘和内存的共通之处就是存储数据，而因为硬盘离CPU比较远，所以叫做外部存储器；内存离CPU比较近，所以叫做内部存储器；它们的内部结构是怎么样的呢？看内存模拟这张图，一个小格只能放电流的两种状态，一种是高电频（二进制的1），一种是低电频（二进制的0）。而一个小格是一个1bit，8个小格就是一个字节(B)，1KB就是1024个字节(B)。内存和硬盘虽然都是存储器，他们的主要区别在于读写速度，硬盘的读写速度慢，内存的读写速度快。内存断电之后会把里面的数据全部清空，而硬盘断电以后不会把数据清空，所以内存不需要考虑把数据真正的写在格子里面，由于少了这一过程，硬盘的读写速度远远比不上内存的读写速度，当然它们的读写速度还取决于它们各自的设计工艺等。CPU又称为中央处理器，它主要擅长加减乘除这类的运算，而不擅长小数运算，GPU擅长小数运算，也就是显卡。</p>
 </li>
+</ol>
+<ol start="2">
 <li><p>内存模拟</p>
 <p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/2.%E5%86%85%E5%AD%98%E6%A8%A1%E6%8B%9F.png" alt=""></p>
-<ul>
-<li>一个小格只能存储0或1（单位：bit）8个小格等于一个字节（单位：byte）</li>
-<li>内存：只负责数据的存放，不负责数据写入，断电就会全部清空</li>
-<li>硬盘：负责数据的存放，还有写入，断电不会清空</li>
-</ul>
 </li>
 <li><p>传输过程</p>
 <p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/3.%E4%BC%A0%E8%BE%93%E8%BF%87%E7%A8%8B.png" alt=""></p>
-<ul>
-<li>例子：450 * 950= ？</li>
-<li>地址总线：告诉内存读/写的位置</li>
-<li>数据总线：数据传输</li>
-<li>控制总线：告诉内存是要读/写</li>
-<li>总线：一根线只能传输1/0（2^n种情况）</li>
-</ul>
+<p>500*200 计算机是怎么运算的呢？</p>
+<p>首先CPU通过控制总线告诉内存要读还是写，通过地址总线去告诉内存要读或者写的地址，然后内存把数据通过数据总线传输给CPU，而这里的总线就是我们的电线，只能传输0/1两种情况，有多少条数据总线决定了一次可以传输多大的数据，我们平常说的32位CPU可以认为有32条数据总线，换算成GB就是4GB,而编程的本质就是CPU跟内存的数据传输过程，我们定义了一个数字255，到内存里就变成了111111(2^8-1)。这是因为内存的设计工艺，而我们人类擅长的是十进制，这中间就产生了很多进制问题。</p>
 </li>
 <li><p>CPU</p>
 <p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/4.CPU.png" alt=""></p>
-<ul>
-<li>CPU擅长整数运算，GPU擅长小数运算</li>
-<li>32位CPU: 32根线 （2^32=4GB）</li>
-<li>64位CPU: 64根线 （2^64=8GB）</li>
-</ul>
 </li>
 <li><p>进制转换</p>
 <p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/9.%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A21.png" alt=""></p>
@@ -494,7 +479,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/10/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" data-id="ckhnj16ke000xusvb67vnbvpa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/10/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" data-id="ckiyjgd2c000t8gvb2x6t8r5p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -681,7 +666,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/10/04/electron/" data-id="ckhnj16jz000husvb4ij28zkr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/10/04/electron/" data-id="ckiyjgd26000j8gvbcibtag7s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -724,7 +709,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/20/css-2-1/" data-id="ckhnj16k1000iusvb4yv554k4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/20/css-2-1/" data-id="ckiyjgd24000i8gvb9r6t38d6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -955,7 +940,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/18/webpack/" data-id="ckhnj16k9000susvbey4zcw8k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/18/webpack/" data-id="ckiyjgd2g000z8gvb1jlgf9ro" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1005,7 +990,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/16/Vue-%E7%9F%A5%E8%AF%86%E7%82%B9/" data-id="ckhnj16k6000ousvb4jzwbrt1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/16/Vue-%E7%9F%A5%E8%AF%86%E7%82%B9/" data-id="ckiyjgd23000h8gvb1ra1brgt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1054,7 +1039,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/08/Github%E5%BA%93/" data-id="ckhnj16j50002usvbbo1c3jp1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/08/Github%E5%BA%93/" data-id="ckiyjgd1i00038gvbebt53035" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1090,7 +1075,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/21/Go-Gorm%E6%A1%86%E6%9E%B6/" data-id="ckhnj16ja0004usvbdrh59r7v" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/21/Go-Gorm%E6%A1%86%E6%9E%B6/" data-id="ckiyjgd1m00058gvb6cbh0jm2" class="article-share-link">Share</a>
       
       
     </footer>
