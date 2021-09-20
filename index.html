@@ -64,6 +64,60 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-C-的内存分配" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/09/20/C-%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="article-date">
+  <time datetime="2021-09-20T13:36:42.000Z" itemprop="datePublished">2021-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C-C/">C++/C</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/09/20/C-%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/">C++的内存分配</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>C 的内存基本上分为 4 部分：静态存储区、堆区、栈区以及常量区。他们的功能不同，对</p>
+<p>他们使用方式也就不同</p>
+<p>1.栈：由编译器自动分配释放;</p>
+<p>2.堆：一般由程序员分配释放，若程序员不释放，程序结束时可能由 OS 回收；</p>
+<p>3.全局区（静态区)：全局变量和静态变量的存储是放在一块的，初始化的全局变量和<br>4.静态变量在一块区域，未初始化的全局变量和未初始化的静态变量在相邻的另一块区域<br>（C++中已经不再这样划分），程序结束释放；</p>
+<p>5.另外还有一个专门放常量的地方，程序结束释放：<br>(a)函数体中定义的变量通常是在栈上；<br>(b)用 malloc, calloc, realloc 等分配内存的函数分配得到的就是在堆上；<br>(c)在所有函数体外定义的是全局量；<br>(d)加了 static 修饰符后不管在哪里都存放在全局区（静态区）；<br>(e)在所有函数体外定义的 static 变量表示在该文件中有效，不能 extern 到别的文件用；<br>(f)在函数体内定义的 static 表示只在该函数体内有效；<br>(g)另外，函数中的”adgfdf”这样的字符串存放在常量区。</p>
+<p>C++编程中的内存基本构造</p>
+<p>1.栈</p>
+<p>2.堆</p>
+<p>3.全局/静态存储区：全局变量和静态变量被分配到同一块内存中，在以前的 C 语言中，<br>全局变量又分为初始化的和未初始化的，在 C++里面没有这个区分了，他们共同占用同一<br>块内存区</p>
+<p>4.常-量存储区：这是一块比较特殊的存储区，他们里面存放的是常量，不允许修改（当<br>然，你要通过非正当手段也可以修改）</p>
+<p>5.代码块（.text段）：存放代码，不允许修改，可以执行</p>
+<p><img src="/images/C++/%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D.jpeg" alt=""></p>
+<p>虽然内存被人为的分成了很多块，但是CPU如何处理我们定义的段中的内容，是当作指令执行，还是当作数据访问，还是当作栈空间，不会因为我们人为的设计和安排，CPU就会按照这样的安排进行操作，而是完全按照程序中具体的汇编指令，以及汇编指令对CS:IP，SS：SP，DS等寄存器的设置来决定的；因此我们可以在对应的位置（函数外，函数内）和对应的语法（malloc，static等）来让编译器生成对应的汇编代码。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2021/09/20/C-%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" data-id="cktswpfdn0000usvb2z6h2ve8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-es5" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/15/es5/" class="article-date">
@@ -1049,42 +1103,6 @@
 
 
   
-    <article id="post-Go-Gorm框架" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/21/Go-Gorm%E6%A1%86%E6%9E%B6/" class="article-date">
-  <time datetime="2020-08-21T05:28:16.000Z" itemprop="datePublished">2020-08-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/21/Go-Gorm%E6%A1%86%E6%9E%B6/">Go-Gorm框架</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/21/Go-Gorm%E6%A1%86%E6%9E%B6/" data-id="cktsh9cco00063ovbgvd1e3il" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -1100,7 +1118,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E7%88%AC%E8%99%AB/">web爬虫</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C++/C</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E7%88%AC%E8%99%AB/">web爬虫</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a></li></ul>
     </div>
   </div>
 
@@ -1115,7 +1133,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
     </div>
   </div>
 
@@ -1126,6 +1144,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/09/20/C-%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/">C++的内存分配</a>
+          </li>
         
           <li>
             <a href="/2020/10/15/es5/">es5</a>
@@ -1141,10 +1163,6 @@
         
           <li>
             <a href="/2020/10/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/04/electron/">electron</a>
           </li>
         
       </ul>
