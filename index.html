@@ -64,6 +64,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-继承" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/09/21/%E7%BB%A7%E6%89%BF/" class="article-date">
+  <time datetime="2021-09-21T14:12:37.000Z" itemprop="datePublished">2021-09-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C-C/">C/C++</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/09/21/%E7%BB%A7%E6%89%BF/">继承</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2021/09/21/%E7%BB%A7%E6%89%BF/" data-id="cktu61tks0000w4vb076wcggk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-C-C-的区别" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/09/21/C-C-%E7%9A%84%E5%8C%BA%E5%88%AB/" class="article-date">
@@ -141,8 +181,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>多态(特性)-&gt;虚函数（技术，语法，关键字）-&gt;虚函数表（原理，背后的实现）</p>
-<h2 id="一-什么是多态？"><a href="#一-什么是多态？" class="headerlink" title="一.什么是多态？"></a>一.什么是多态？</h2><ul>
+        <h2 id="一-什么是多态？"><a href="#一-什么是多态？" class="headerlink" title="一.什么是多态？"></a>一.什么是多态？</h2><ul>
 <li><h3 id="动态多态"><a href="#动态多态" class="headerlink" title="动态多态"></a>动态多态</h3></li>
 </ul>
 <ol>
@@ -799,193 +838,6 @@
 
 
   
-    <article id="post-electron" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/04/electron/" class="article-date">
-  <time datetime="2020-10-04T05:23:23.000Z" itemprop="datePublished">2020-10-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/04/electron/">electron</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="与web开发的不同点"><a href="#与web开发的不同点" class="headerlink" title="与web开发的不同点"></a>与web开发的不同点</h5><ol>
-<li><p>主进程和渲染进程</p>
-<p><img src="/images/electron/0.electron%E6%9E%B6%E6%9E%84.png" alt=""></p>
-<ul>
-<li><p>主进程：Electron运行package.json的main脚本的进程</p>
-<ul>
-<li><p>特点：每个应用只有一个主进程</p>
-</li>
-<li><p>作用：管理原生GUI, 典型的窗口（BrowserWindow, Tray, Dock, Menu）</p>
-<p>​           创建渲染进程</p>
-<p>​           控制应用生命周期（app）</p>
-</li>
-</ul>
-</li>
-<li><p>渲染进程：展示Web页面的进程</p>
-<ul>
-<li><p>特点：一个Electron应用可以有多个渲染进程</p>
-</li>
-<li><p>作用：通过Node.js，Electron提供的API可以跟系统底层打交道</p>
-<p>​           开发Web页面</p>
-<p><img src="/images/electron/0-1.api%E6%A8%A1%E5%9D%97.png" alt=""></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>进程间的通信</p>
-<ul>
-<li><p>目的：通知事件（比如主进程才能够创建原生菜单）</p>
-<p>​           数据传输（比如想在某个页面里获得现在的内存情况）</p>
-<p>​           共享数据（比如用户信息在各个进程中都需要用到）</p>
-</li>
-<li><p>类型：</p>
-<ul>
-<li>从渲染进程到主进程<ul>
-<li>Callback写法    <ul>
-<li>ipcRenderer.send(channel, …args)</li>
-<li>ipcMain.on(channel, handler)</li>
-</ul>
-</li>
-<li>Promise写法（Electron7.0之后，处理请求+响应模式）<ul>
-<li>ipcRenderer.invoke(channel, …args)</li>
-<li>ipcMain.handle(channel, handler)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>从主进程到渲染进程<ul>
-<li>webContents.send(channel) </li>
-<li>ipcRenderer.on(channel, handler)</li>
-</ul>
-</li>
-<li>渲染进程到渲染进程（比较少）<ul>
-<li>通知事件<ul>
-<li>通过主进程转发（Electron之前）</li>
-<li>ipcRenderer.sendTo（Electron5之后）</li>
-</ul>
-</li>
-<li>数据共享<ul>
-<li>Web技术</li>
-<li>使用remote（尽量少用）</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<ol start="3">
-<li><p>Native能力及原生GUI</p>
-<p><img src="/images/electron/0-2.electron%E8%83%BD%E5%8A%9B.png" alt=""></p>
-<p><img src="/images/electron/0-3.electron%E5%8E%9F%E7%94%9F%E8%83%BD%E5%8A%9B.png" alt=""></p>
-</li>
-<li><p>更好的体验</p>
-<ul>
-<li>无兼容性问题<ul>
-<li>不用担心在Safari, IE上的表现差异了</li>
-<li>大胆使用Chrome浏览器已经支持的API</li>
-<li>babel中设置targets为Electron对应的Chrome版本</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li><p>大胆使用ES6/7/8/9/10高级语法</p>
-<ul>
-<li>Async await/Promise</li>
-<li>String/Array/Object等高级用法</li>
-<li>BigInt</li>
-</ul>
-</li>
-<li><p>无跨域问题</p>
-<ul>
-<li>使用Node.js发送请求</li>
-<li>使用Electron net发送请求</li>
-</ul>
-</li>
-<li><p>最新浏览器Feature</p>
-</li>
-<li><p>No PolyFill</p>
-</li>
-<li><p>Powered by Node.js</p>
-</li>
-<li><p>More</p>
-<ul>
-<li>操作本地文件</li>
-<li>更好用的本地DB</li>
-<li>多线程，多进程并行</li>
-</ul>
-</li>
-</ul>
-<h5 id="远程连接项目-练习"><a href="#远程连接项目-练习" class="headerlink" title="远程连接项目 练习"></a>远程连接项目 练习</h5><ol>
-<li><p>业务流程</p>
-<p><img src="/images/electron/2.%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6.png" alt=""></p>
-</li>
-<li><p>用到的技术点</p>
-<p><img src="/images/electron/4.electron%E6%8A%80%E6%9C%AF%E7%82%B9.png" alt=""></p>
-<p><img src="/images/electron/5.webRTC%E6%8A%80%E6%9C%AF.png" alt=""></p>
-<p><img src="/images/electron/5-2-1.webRTC-RTCPeerConnection.png" alt=""></p>
-<p><img src="/images/electron/5-2-2.%E6%89%8B%E5%8A%A8p2p%E8%BF%9E%E6%8E%A5.png" alt=""></p>
-<p><img src="/images/electron/5-2-3.%E4%BD%BF%E7%94%A8sinal%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%BC%A0%E8%BE%93%E8%A7%86%E9%A2%91%E6%B5%81.png" alt=""></p>
-<p><img src="/images/electron/6.%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF%E7%82%B9.png" alt=""></p>
-</li>
-<li><p>渲染进程</p>
-<ul>
-<li><p>控制端</p>
-<p><img src="/images/electron/7.%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B-1.png" alt=""></p>
-<p><img src="/images/electron/7.%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B-2.png" alt=""></p>
-<p><img src="/images/electron/7.%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B-%E6%98%BE%E7%A4%BA%E5%82%80%E5%84%A1%E7%AB%AF%E9%A1%B5%E9%9D%A2.png" alt=""></p>
-</li>
-<li><p>傀儡端</p>
-<p><img src="/images/electron/7.%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B-1.png" alt=""></p>
-<p><img src="/images/electron/7.%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B-3.png" alt=""></p>
-</li>
-</ul>
-</li>
-<li><p>主进程</p>
-</li>
-</ol>
-<ol start="5">
-<li><p>websoket服务</p>
-<p><img src="/images/electron/8.websocket%E6%9C%8D%E5%8A%A1.png" alt=""></p>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/10/04/electron/" data-id="cktsh9cdh000o3ovba53v25ee" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -1029,6 +881,10 @@
       <ul>
         
           <li>
+            <a href="/2021/09/21/%E7%BB%A7%E6%89%BF/">继承</a>
+          </li>
+        
+          <li>
             <a href="/2021/09/21/C-C-%E7%9A%84%E5%8C%BA%E5%88%AB/">C/C++的区别</a>
           </li>
         
@@ -1042,10 +898,6 @@
         
           <li>
             <a href="/2021/09/20/C-%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/">内存分配</a>
-          </li>
-        
-          <li>
-            <a href="/2021/09/19/C-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">C++基础语法-数据类型</a>
           </li>
         
       </ul>
